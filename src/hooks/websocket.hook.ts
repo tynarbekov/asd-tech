@@ -42,7 +42,7 @@ export const useWebSocket = () => {
   useEffect(() => {
     return () => {
       clearInterval(interval)
-      ws.close()
+      ws && ws.close()
     }
   }, [])
 
